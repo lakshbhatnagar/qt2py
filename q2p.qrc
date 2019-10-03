@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>res/qt2py.png</file>
+  </qresource>
+</RCC>
