@@ -6,14 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>655</width>
-    <height>358</height>
+    <width>662</width>
+    <height>500</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="minimumSize">
    <size>
     <width>0</width>
     <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>662</width>
+    <height>500</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -24,13 +36,16 @@
     <normaloff>:/icons/res/qt2py.png</normaloff>:/icons/res/qt2py.png</iconset>
   </property>
   <property name="windowOpacity">
-   <double>0.950000000000000</double>
+   <double>1.000000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="sizePolicy">
-      <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
@@ -38,21 +53,477 @@
      <property name="minimumSize">
       <size>
        <width>640</width>
-       <height>480</height>
+       <height>500</height>
       </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>640</width>
+       <height>500</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="tabShape">
+      <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
       <number>0</number>
      </property>
+     <property name="iconSize">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="documentMode">
+      <bool>false</bool>
+     </property>
+     <property name="tabsClosable">
+      <bool>false</bool>
+     </property>
+     <property name="movable">
+      <bool>true</bool>
+     </property>
+     <property name="tabBarAutoHide">
+      <bool>true</bool>
+     </property>
      <widget class="QWidget" name="pyqt5_tab">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
       <attribute name="title">
-       <string>PyQt5</string>
+       <string>Q2P Compiler</string>
       </attribute>
+      <widget class="QFrame" name="frame">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>80</y>
+         <width>621</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLineEdit" name="lineEdit_filepath_pyqt">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>451</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">padding: 6px 12px;
+font-size: 14;
+color: #555;
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 8px</string>
+        </property>
+        <property name="placeholderText">
+         <string>File Path</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_Browse_pyqt">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>30</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>31</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+font-size: 14;
+color: #fff;
+background-color: #428bca;
+border: 1px solid #ccc;
+border-radius: 4px;
+border-color: #357ebd;
+}
+
+QPushButton:hover{
+color: #fff;
+background-color: #3071a9;
+border-color: #285e8e;
+}</string>
+        </property>
+        <property name="text">
+         <string>Browse</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_srcFile_pyqt">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>261</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">padding: 6px 12px;
+font-size: 14;
+color: #555;
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 8px</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="placeholderText">
+         <string>QT *.Ui File Name</string>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_Generate_pyqt">
+        <property name="geometry">
+         <rect>
+          <x>177</x>
+          <y>170</y>
+          <width>281</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>31</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+          <stylestrategy>PreferAntialias</stylestrategy>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+font-size: 14;
+color: #fff;
+background-color: #555aaa;
+border: 1px solid #ccc;
+border-radius: 25px;
+border-color: #357ebd;
+}
+
+QPushButton:hover{
+color: #fff;
+background-color: #3071a9;
+border-color: #285e8e;
+}</string>
+        </property>
+        <property name="text">
+         <string>Generate</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_outFile_pyqt">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>100</y>
+          <width>261</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">padding: 6px 12px;
+font-size: 14;
+color: #555;
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 8px</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="placeholderText">
+         <string>Target *.py UI File Name</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_sourceFileName">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>290</y>
+          <width>181</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #555;
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>Source</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_targetFileName">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>290</y>
+          <width>181</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #555;
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>Target</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>296</y>
+          <width>51</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #555;
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>=</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QComboBox" name="compilerSelect">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>20</y>
+         <width>161</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <stylestrategy>PreferAntialias</stylestrategy>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">padding: 6px 12px;
+font-size: 14;
+color: #555;
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 8px</string>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>PyQt5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>PySide2</string>
+        </property>
+       </item>
+      </widget>
      </widget>
-     <widget class="QWidget" name="pyside2_tab">
+     <widget class="QWidget" name="aboutTab">
       <attribute name="title">
-       <string>PySide2</string>
+       <string>About</string>
       </attribute>
+      <widget class="QToolButton" name="pushButton_github">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>200</y>
+         <width>181</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QToolButton{
+padding: 6px 12px;
+font-size: 14;
+color: #555;
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 85px;
+}
+
+QToolButton:Hover{
+color: #fff;
+background-color: #FF4040;
+border-color: #285e8e;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="q2p.qrc">
+         <normaloff>:/icons/res/git.png</normaloff>:/icons/res/git.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>300</width>
+         <height>300</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_sourceFileName_2">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>400</y>
+         <width>291</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #555;
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>GitHub @lakshbhatnagar</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="pushButton_q2p">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>30</y>
+         <width>181</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QToolButton{
+padding: 6px 12px;
+font-size: 14;
+color: #555;
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 85px;
+}
+
+QToolButton:Hover{
+color: #fff;
+background-color: #409BFF;
+border-color: #285e8e;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="q2p.qrc">
+         <normaloff>:/icons/res/qt2py.png</normaloff>:/icons/res/qt2py.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>300</width>
+         <height>300</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_sourceFileName_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>220</y>
+         <width>231</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #555;
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>v0.1</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
      </widget>
     </widget>
    </item>
@@ -61,5 +532,38 @@
  <resources>
   <include location="q2p.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>lineEdit_outFile_pyqt</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>label_targetFileName</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>502</x>
+     <y>226</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>409</x>
+     <y>418</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_srcFile_pyqt</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>label_sourceFileName</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>165</x>
+     <y>227</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>260</x>
+     <y>423</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
