@@ -22,3 +22,7 @@ Convert your Qt ui files to python ui files with Easy to use Interface.
  - Python 3x - [Download Python](https://www.python.org/downloads)
  - PySide2 - `pip install PySide2`
  - PyQt5 - `pip install PyQt5`
+ 
+ ## Download
+ 
+ - [Download Qt2Py](https://github.com/lakshbhatnagar/qt2py/releases)
